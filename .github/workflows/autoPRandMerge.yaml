@@ -1,8 +1,8 @@
 name: Create a pull request and merge it  
-on:
-  push:
-    branches:
-      - feature/*
+on
+  pull_request_review:
+    types:
+      - submitted
 jobs:
   Automatically:
     runs-on: ubuntu-latest
@@ -10,8 +10,8 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v2
 
-#       - name: Make changes to pull request
-#         run: date +%s > report.txt
+      - name: Make changes to pull request
+        run: date +%s > report.txt
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4

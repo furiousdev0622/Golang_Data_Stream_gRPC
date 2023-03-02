@@ -12,6 +12,8 @@ type JsonTransaction struct {
 	// Description string     `json:"description"`
 }
 
+// test commit 4
+
 type Transaction struct {
 	Identity          string     `gorm:"primary_key"`
 	Amount      string     `gorm:"size:12"`
