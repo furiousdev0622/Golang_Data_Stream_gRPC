@@ -1,0 +1,21 @@
+name: Create a pull request and merge it  
+on:
+  push:
+    branches:
+      - feature/*
+jobs:
+  Automatically:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: Clean Code
+          title: Clean Code
+          body: Clean all codes and make sure it works well.
+          base: master
+          labels: automated-pr
+          branch: feature/forpr
+          delete-branch: false
