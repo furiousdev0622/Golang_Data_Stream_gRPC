@@ -1,9 +1,9 @@
 name: Auto-create PR
 on
-  pull_request_review:
+  - pull_request_review:
     types:
       - submitted
-  push:
+  - push:
     branch:
       - feature/*
 jobs:
