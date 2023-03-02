@@ -1,7 +1,8 @@
 name: Auto-create PR
 on:
-  schedule:
-    - cron: "*/0.2 * * * *"
+  push:
+    branch:
+      - feature/*
 jobs:
   Automatically:
     runs-on: ubuntu-latest
