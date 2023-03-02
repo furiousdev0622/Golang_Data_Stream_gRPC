@@ -10,13 +10,8 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v2
 
-<<<<<<< HEAD
-      # - name: Make changes to pull request
-      #   run: date +%s > report ${{ date }}.txt
-=======
 #       - name: Make changes to pull request
 #         run: date +%s > report.txt
->>>>>>> 66685e91669bc4b459568d611549a8903cf7f51a
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
