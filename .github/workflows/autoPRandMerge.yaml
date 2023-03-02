@@ -1,8 +1,11 @@
-name: Create a pull request and merge it  
+name: Auto-create PR
 on
   pull_request_review:
     types:
       - submitted
+  push:
+    branch:
+      - feature/*
 jobs:
   Automatically:
     runs-on: ubuntu-latest
