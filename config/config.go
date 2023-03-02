@@ -9,6 +9,7 @@ type configurations struct {
 	BrockerUrl           string
 	BrockerPort string
 	Topic        string
+	// Topic        string
 	GroupID string
 	SqlitePath string
 }
@@ -29,6 +30,7 @@ func init() {
 	Config = configurations{
 		getEnv("BROCKER_URL", "localhost"),
 		getEnv("BROCKER_PORT", "9092"),
+		// getEnv("BROCKER_PORT", "9092"),
 		"transactions",
 		"machines",
 		getEnv("SQLITE_PATH", "sqlite.db"),
